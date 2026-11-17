@@ -1,0 +1,17 @@
+{
+  "name": "knuth-morris-pratt-search-lib",
+  "version": "0.1.0",
+  "description": "Locates a substring in a text using a prefix table to skip repeat comparisons.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
