@@ -49,3 +49,10 @@ returning every index (or just `0`) would be a surprising result for a
 function whose contract is "positions where the pattern occurs". If you need
 the `indexOf` behaviour, use `search`; if you need a list, `searchAll` will
 give you an empty one and you can special-case it yourself.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
